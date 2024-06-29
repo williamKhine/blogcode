@@ -15,7 +15,7 @@ export default function GitHubSignIn() {
     return (
         <Button className={'w-full'} onClick={signInWithGitHub}>
             <GitHubLogoIcon className={'mr-2'}/>
-            Sign in with GitHub
+            Continue with GitHub
         </Button>
     )
 }

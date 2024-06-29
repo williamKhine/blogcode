@@ -9,7 +9,7 @@ export default async function signUp(formData: FormData) {
     }
 
     if (passwords.password !== passwords.passwordConfirm) {
-        return redirect('/signup?message=Passwords do not match')
+        return redirect('/signup?error=Passwords do not match.')
     }
 
     const supabase = createClient();
@@ -18,8 +18,8 @@ export default async function signUp(formData: FormData) {
         password: passwords.password,
     });
     if (error) {
-        return redirect('/signup?message=Could not authenticate user')
+        return redirect('/signup?error=Could not authenticate user.')
     }
-    return redirect('/login?message=Account created. Login to continue.')
+    return redirect('/login?success=Account created. Login to continue.')
 
 }
