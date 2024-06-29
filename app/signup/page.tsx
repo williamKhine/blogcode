@@ -38,16 +38,16 @@ export default function SignUp({searchParams}: { searchParams: { success?: strin
                     <div className={'grid gap-4'}>
                         <div className={'flex flex-col space-y-1.5'}>
                             <Label htmlFor={'email'}>Email</Label>
-                            <Input id={'email'} name={'email'} type={'email'}/>
+                            <Input id={'email'} name={'email'} type={'email'} required={true}/>
                         </div>
                         <div className={'flex flex-col space-y-1.5'}>
                             <Label htmlFor={'password'}>Password</Label>
-                            <Input id={'password'} name={'password'} type={'password'} placeholder={'••••••••'}/>
+                            <Input id={'password'} name={'password'} type={'password'} placeholder={'••••••••'} required={true}/>
                         </div>
                         <div className={'flex flex-col space-y-1.5'}>
                             <Label htmlFor={'passwordConfirm'}>Confirm Password</Label>
                             <Input id={'passwordConfirm'} name={'passwordConfirm'} type={'password'}
-                                   placeholder={'••••••••'}/>
+                                   placeholder={'••••••••'} required={true}/>
                         </div>
                     </div>
                 </CardContent>

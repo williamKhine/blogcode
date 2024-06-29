@@ -18,7 +18,7 @@ export default async function signUp(formData: FormData) {
         password: passwords.password,
     });
     if (error) {
-        return redirect('/signup?error=Could not authenticate user.')
+        return redirect('/signup?error=Something went wrong.')
     }
     return redirect('/login?success=Account created. Login to continue.')
 
