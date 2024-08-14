@@ -1,9 +1,9 @@
 import {createClient} from "@/utils/supabase/server";
 import Link from "next/link";
 
-import {Button} from "@/components/ui/button"
 import BlogcodeLogo from "@/components/BlogcodeLogo";
-import SignInSignOutButton from "@/components/navbar/SignInSignOutButton";
+import SignInLoginButton from "@/components/navbar/SignInLoginButton";
+import NavDrop from "@/components/navbar/NavDrop";
 
 export default async function Navbar() {
     const supabase = createClient();
@@ -19,10 +19,7 @@ export default async function Navbar() {
                     blogco<span className={'text-blue-500'}>.</span>de
                 </Link>
                 <div className={'space-x-1'}>
-                    {user && <Button variant={'outline'}>
-                        {user.email}
-                    </Button>}
-                    <SignInSignOutButton />
+                    {user ? <NavDrop username={user.email!}/> : <SignInLoginButton/>}
                 </div>
             </nav>
         </header>
