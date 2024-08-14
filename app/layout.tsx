@@ -1,7 +1,7 @@
 import {GeistSans} from "geist/font/sans";
 import "./globals.css";
 import {ThemeProvider} from "@/components/theme-provider";
-import Navbar from "@/components/Navbar";
+import Navbar from "@/components/navbar/Navbar";
 import Footer from "@/components/Footer";
 
 import {Toaster} from "@/components/ui/toaster"
@@ -29,7 +29,7 @@ export default function RootLayout({
             defaultTheme="system"
             enableSystem
             disableTransitionOnChange>
-            <main className="min-h-screen flex flex-col items-center">
+            <main className="min-h-dvh flex flex-col items-center">
                 <Navbar/>
                 {children}
                 <Footer/>
