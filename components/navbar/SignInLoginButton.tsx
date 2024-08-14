@@ -6,7 +6,7 @@ import Link from "next/link";
 
 import {buttonVariants} from "@/components/ui/button";
 
-export default function SignInSignOutButton() {
+export default function SignInLoginButton() {
     const pathname = usePathname();
     const [href, setHref] = useState<string>("");
 
