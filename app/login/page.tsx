@@ -36,7 +36,7 @@ export default function Login({searchParams}: { searchParams: { success?: string
           </CardContent>
           <CardFooter>
             <Button className={'w-full'} type={'submit'} form={'login'} formAction={login}>
-              Sign Up
+              Login
             </Button>
           </CardFooter>
         </form>
